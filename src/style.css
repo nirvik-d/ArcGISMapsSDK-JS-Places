@@ -1,0 +1,20 @@
+html,
+body,
+arcgis-map {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#viewDiv {
+  flex: 1;
+}
+
+#categorySelect {
+  margin: 5px;
+}
+
+#contents {
+  --calcite-shell-panel-min-width: 340px;
+}

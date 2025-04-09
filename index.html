@@ -1,0 +1,43 @@
+html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Maps SDK for JavaScript Tutorials: Find nearby places and details</title>
+    <script type="module" src="src/auth.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.32/"></script>
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"></script>
+    <script type="module" src="src/main.js"></script>
+</head>
+<body>
+<calcite-shell>
+    <calcite-shell-panel slot="panel-start" position="start" id="contents">
+      <calcite-combobox id="categorySelect" placeholder="Filter by category" overlay-positioning="fixed" selection-mode="single">
+        <calcite-combobox-item value="4d4b7104d754a06370d81259" text-label="Arts and Entertainment"></calcite-combobox-item>
+        <calcite-combobox-item value="4d4b7105d754a06375d81259" text-label="Business and Professional Services"></calcite-combobox-item>
+        <calcite-combobox-item value="63be6904847c3692a84b9b9a" text-label="Community and Government"></calcite-combobox-item>
+        <calcite-combobox-item value="63be6904847c3692a84b9bb5" text-label="Dining and Drinking"></calcite-combobox-item>
+        <calcite-combobox-item value="63be6904847c3692a84b9bb9" text-label="Health and Medicine"></calcite-combobox-item>
+        <calcite-combobox-item selected value="4d4b7105d754a06377d81259" text-label="Landmarks and Outdoors"></calcite-combobox-item>
+        <calcite-combobox-item value="4d4b7105d754a06378d81259" text-label="Retail"></calcite-combobox-item>
+        <calcite-combobox-item value="4f4528bc4b90abdf24c9de85" text-label="Sports and Recreation"></calcite-combobox-item>
+        <calcite-combobox-item value="4d4b7105d754a06379d81259" text-label="Travel and Transportation"></calcite-combobox-item>
+      </calcite-combobox>
+      <calcite-panel class="contents">
+        <calcite-flow id="flow">
+          <calcite-flow-item>
+            <calcite-list id="results">
+              <calcite-notice open>
+                <div slot="message">
+                  Click on the map to search for nearby places
+                </div>
+              </calcite-notice>
+            </calcite-list>
+          </calcite-flow-item>
+        </calcite-flow>
+      </calcite-panel>
+    </calcite-shell-panel>
+    <div id="viewDiv"></div>
+  </calcite-shell>
+</body>
+</html>
